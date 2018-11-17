@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring MVC</title>
+</head>
+<body>
+<h1>To jest aplikacja Spring MVC</h1>
+
+<div th:if="${visitor !=null}">
+    <h2 th:text="'Witaj ' + ${visitor} + '!'">Rafał</h2>
+</div>
+
+</body>
+</html>
