@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Klienci</title>
+    <link rel="Stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}" />
 </head>
 <body>
 <table>
@@ -10,8 +11,24 @@
         <th>Lp.</th>
         <th>Imię i nazwisko</th>
         <th>Dane kontaktowe</th>
-        <th>Inne</th>
+        <th>Akcje</th>
     </tr>
+    <tr th:each="customer : ${allCustomers}">
+        <td>
+            <div th:text="${customer.id}">10</div>
+        </td>
+        <td>
+            <div th:text="${customer.firstName} + ' ' + ${customer.lastName}">Rafał Kosmo</div>
+        </td>
+        <td>
+            <div th:text="${customer.email}">noemail@email.pl</div>
+            <div th:text="${customer.phoneNumber}">111 000 111</div>
+        </td>
+        <td><a th:href="${'/customer/' + customer.id}">Pokaż</a>,
+            Edycja,
+            <a th:href="${'/customer/delete/' + customer.id}">Usuń</a></td>
+    </tr>
+
 </table>
 </body>
 </html>

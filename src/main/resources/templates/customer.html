@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Klient</title>
-    <style>
-        span {
-            font-weight: bold;
-        }
-    </style>
+    <link rel="Stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}"/>
 </head>
 <body>
 <h1>Dane klienta: </h1>
@@ -37,5 +33,6 @@
         <div> Miasto: <span th:text="${customer.city}">Nieznane</span></div>
     </li>
 </ul>
+<a href="/customer/all">Wróć</a>
 </body>
 </html>

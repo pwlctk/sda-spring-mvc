@@ -30,10 +30,18 @@ public class CustomerController {
         return "customer";
     }
 
-    @RequestMapping("/all")
+    @RequestMapping({"/all", "/"})
     public String allCustomers(Model model) {
-        List<Customer> allCustomers = service.getAll();
-        model.addAttribute("allCustomers", allCustomers);
+        List<Customer> all = service.getAll();
+        model.addAttribute("allCustomers", all);
         return "customersList";
     }
+    @RequestMapping("/delete/{id}")
+    public String deleteCustomer(@PathVariable Long id){
+        service.delete(id);
+
+        return "redirect:/customer/all";
+    }
+
+
 }

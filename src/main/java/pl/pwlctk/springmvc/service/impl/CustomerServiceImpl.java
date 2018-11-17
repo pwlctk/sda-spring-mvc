@@ -52,6 +52,6 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void delete(Long id) {
-
+        customers.remove(id);
     }
 }
