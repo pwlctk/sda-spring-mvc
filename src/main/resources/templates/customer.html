@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Klient</title>
+    <style>
+        span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1>Dane klienta: </h1>
+<ul>
+    <li>
+        <div> ID: <span th:text="${customer.id}">1</span></div>
+    </li>
+    <li>
+        <div> Imię: <span th:text="${customer.firstName}">Rafał</span></div>
+    </li>
+    <li>
+        <div> Nazwisko: <span th:text="${customer.lastName}">Kosmo</span></div>
+    </li>
+    <li>
+        <div> Email: <span th:text="${customer.email}">noname@noname.pl</span></div>
+    </li>
+    <li>
+        <div> Telefon: <span th:text="${customer.phoneNumber}">543 432 321</span></div>
+    </li>
+    <li>
+        <div> Adres: <span th:text="${customer.addressLine}">Nieznana 4</span></div>
+    </li>
+    <li>
+        <div> Kod pocztowy: <span th:text="${customer.zipCode}">00-000</span></div>
+    </li>
+    <li>
+        <div> Miasto: <span th:text="${customer.city}">Nieznane</span></div>
+    </li>
+</ul>
+</body>
+</html>
