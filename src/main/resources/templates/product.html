@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Produkt</title>
+    <link rel="Stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>Dane produktu: </h1>
+<ul>
+    <li>
+        <div> ID: <span th:text="${product.id}">1</span></div>
+    </li>
+    <li>
+        <div> Produkt: <span th:text="${product.description}">Stolik</span></div>
+    </li>
+    <li>
+        <div> Cena: <span th:text="${product.price}">10</span></div>
+    </li>
+    <li>
+        <div> Obrazek: <span th:text="${product.imageUrl}">dsadasfasf</span></div>
+    </li>
+
+</ul>
+<a href="/product/all">Wróć</a>
+</body>
+</html>

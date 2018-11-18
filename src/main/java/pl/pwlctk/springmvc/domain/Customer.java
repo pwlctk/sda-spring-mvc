@@ -1,8 +1,13 @@
 package pl.pwlctk.springmvc.domain;
 
-public class Customer {
+import javax.persistence.*;
 
+@Entity
+public class Customer {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String firstName;
     private String lastName;
     private String email;

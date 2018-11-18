@@ -14,10 +14,10 @@ public class HelloController {
         return "index";
     }
 
-    @RequestMapping("/{name}")
-    public String sayHelloToYou(@PathVariable String name, Model model) {
-
-        model.addAttribute("visitor", name);
-        return "index";
-    }
+//    @RequestMapping("/{name}")
+//    public String sayHelloToYou(@PathVariable String name, Model model) {
+//
+//        model.addAttribute("visitor", name);
+//        return "index";
+//    }
 }

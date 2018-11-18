@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edycja danych klienta</title>
+    <link rel="Stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h3 th:text="${title}"></h3>
+<form method="post"
+      action="#"
+      th:action="@{/customer/update}"
+      th:object="${customer}">
+    <table>
+
+        <tr th:if="${title.equals('Zmiana danych klienta')}">
+            <td>ID:</td>
+            <td>
+                <input id="readonly" type="text" th:field="*{id}" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td>Imię</td>
+            <td><input type="text" th:field="*{firstName}" value="Paweł"/></td>
+        </tr>
+        <tr>
+            <td>Nazwisko</td>
+            <td><input type="text" th:field="*{lastName}"/></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" th:field="*{email}"/></td>
+        </tr>
+        <tr>
+            <td>Telefon</td>
+            <td><input type="text" th:field="*{phoneNumber}"/></td>
+        </tr>
+        <tr>
+            <td>Adres</td>
+            <td><input type="text" th:field="*{addressLine}"/></td>
+        </tr>
+        <tr>
+            <td>Kod pocztowy</td>
+            <td><input type="text" th:field="*{zipCode}"/></td>
+        </tr>
+        <tr>
+            <td>Miasto</td>
+            <td><input type="text" th:field="*{city}"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button id="submit" type="submit" th:text="${button}">Zapisz</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

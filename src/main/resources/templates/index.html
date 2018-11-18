@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<html lang="pl" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <meta charset="UTF-8">
     <title>Spring MVC</title>
@@ -10,6 +11,12 @@
 <div th:if="${visitor !=null}">
     <h2 th:text="'Witaj ' + ${visitor} + '!'">Rafał</h2>
 </div>
+
+<!--<div sec:authorize="isAuthenticated()" style="display: inline-block;">Jesteś zalogowany jako: <span sec:authentication="name"></span></div>-->
+<!--<div>Poziom uprawnień: <span sec:authentication="principal.authorities"></span></div>-->
+<!--<div><a th:href="@{/logout}">Wyloguj</a></div>-->
+
+<a href="/customer/all">Lista klientów</a>
 
 </body>
 </html>

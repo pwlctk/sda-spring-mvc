@@ -8,11 +8,10 @@ public interface CustomerService {
     //CRUD
 
     //C
-    void save(Customer customer);
+    Customer add(Customer customer);
 
     //R
     Customer getOne(Long id);
-
     List<Customer> getAll();
 
     //U
@@ -20,5 +19,4 @@ public interface CustomerService {
 
     //D
     void delete(Long id);
-
 }

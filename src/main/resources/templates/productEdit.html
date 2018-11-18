@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edycja danych produktu</title>
+    <link rel="Stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h3 th:text="${title}"></h3>
+<form method="post"
+      action="#"
+      th:action="@{/product/update}"
+      th:object="${product}">
+    <table>
+
+        <tr th:if="${title.equals('Zmiana danych produktu')}">
+            <td>ID:</td>
+            <td>
+                <input id="readonly" type="text" th:field="*{id}" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td>Produkt</td>
+            <td><input type="text" th:field="*{description}" value="Stolik"/></td>
+        </tr>
+        <tr>
+            <td>Cena</td>
+            <td><input type="text" th:field="*{price}"/></td>
+        </tr>
+        <tr>
+            <td>Obrazek</td>
+            <td><input type="text" th:field="*{imageUrl}"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button id="submit" type="submit" th:text="${button}">Zapisz</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

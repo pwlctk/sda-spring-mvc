@@ -7,3 +7,17 @@ table, td{
     border-collapse: collapse;
     padding: 5px;
 }
+
+#readonly {
+    background-color: ghostwhite;
+}
+
+#submit{
+    margin: 0 auto;
+    display: block;
+}
+
+#logout{
+    position: absolute;
+    right: 20px;
+}

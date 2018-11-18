@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Klienci</title>
-    <link rel="Stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}" />
+    <link rel="Stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}"/>
 </head>
 <body>
+<div id="logout"><a href="/logout">Wyloguj</a></div>
+<div><a href="/customer/new">Dodaj nowego klienta</a></div>
+
+
 <table>
     <tr>
         <th>Lp.</th>
@@ -25,7 +29,7 @@
             <div th:text="${customer.phoneNumber}">111 000 111</div>
         </td>
         <td><a th:href="${'/customer/' + customer.id}">Pokaż</a>,
-            Edycja,
+            <a th:href="${'/customer/update/' + customer.id}">Edycja</a>
             <a th:href="${'/customer/delete/' + customer.id}">Usuń</a></td>
     </tr>
 
