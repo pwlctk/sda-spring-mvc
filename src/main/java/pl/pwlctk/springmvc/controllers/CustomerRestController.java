@@ -4,7 +4,6 @@ package pl.pwlctk.springmvc.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.pwlctk.springmvc.domain.Customer;
 import pl.pwlctk.springmvc.service.CustomerService;
